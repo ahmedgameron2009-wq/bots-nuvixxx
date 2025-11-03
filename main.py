@@ -1,3 +1,11 @@
+# ---- parche para evitar error de audioop en Python 3.13 ----
+import sys, types
+sys.modules['audioop'] = types.ModuleType('audioop')
+# ------------------------------------------------------------
+
+import discord
+import asyncio
+# (el resto de tus imports y código)
 import os
 import subprocess
 import time
