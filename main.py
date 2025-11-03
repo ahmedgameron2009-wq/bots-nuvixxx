@@ -57,3 +57,11 @@ except KeyboardInterrupt:
     for p in processes:
         p.terminate()
     print("✅ All bots stopped cleanly.")
+import asyncio
+
+async def keep_alive():
+    print("✅ Nuvix Suite Pro v2 is running and will stay alive on Render!")
+    while True:
+        await asyncio.sleep(3600)  # evita que Render cierre el proceso
+
+asyncio.run(keep_alive())
